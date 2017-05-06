@@ -7,8 +7,7 @@ import (
     )
 
 func main() {
-    fmt.Println(runtime.NumCPU())
-    fmt.Println(runtime.GOMAXPROCS(4))
+    runtime.GOMAXPROCS(4)
 
     jobs := make(chan int, 5)
     done := make(chan bool)
